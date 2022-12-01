@@ -1,0 +1,42 @@
+// variables#######
+
+$color-dark: #262626;
+$color-black: #000;
+$color-primary: #d3ab55;
+$color-secondary: #bbb;
+
+$font-dancingScript: "Dancing Scipt", cursive;
+$font-josefinSans: "josefin Sans", cursive;
+$font-nunito: "josefin Sans", sans-serif;
+
+// mixins######
+@mixin FlexLayout {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin textStyles {
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+// mixing for adding two values(top-assigned $topValue)
+@mixin centering($topValue) {
+  position: absolute;
+  top: $topValue;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+// General reset styles######
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $color-dark;
+}

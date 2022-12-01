@@ -1,0 +1,21 @@
+.header {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background: linear-gradient(rgba($color-black, 0.8), rgba($color-black, 0.6)),
+    url(../images/reservation-bg.jpeg) center/cover no-repeat;
+
+  // @include centering (2values from mixin)
+
+  .brand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include centering(15%);
+  }
+  &-banner {
+    text-align: center;
+
+    @include centering(50%);
+  }
+}
