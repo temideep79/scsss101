@@ -1,8 +1,10 @@
 .header {
   nav {
-    padding: 2.4rem;
+    padding: 2rem 4rem;
   }
   &__logo {
+    img {
+    }
   }
 
   &__menu {
@@ -10,7 +12,7 @@
     > span {
       display: block;
       width: 26px;
-      height: 2px;
+      height: 4px;
       background-color: $darkBlue;
 
       &:not(:last-child) {
@@ -21,12 +23,42 @@
   &__links {
     a {
       font-size: 1.4rem;
+      margin-right: 3rem;
       color: $darkBlue;
+      position: relative;
+      cursor: pointer;
+      transition: color 1s ease-in-out;
+
+      &:hover {
+        color: $darkBlue;
+      }
+      &::before {
+        content: "";
+        background: lime;
+        display: block;
+        position: absolute;
+        height: 3px;
+        width: 100%;
+        left: 0;
+        right: 0;
+        bottom: -10px;
+        opacity: 0;
+        transition: opacity 0.5s ease-in;
+      }
+      &:hover::before {
+        width: 100%;
+        opacity: 1;
+      }
     }
   }
 
   &__cta {
     font-size: $font-sm;
     color: $white;
+    transition: all 0.5s ease-in;
+    &:hover {
+      color: $darkBlue;
+      opacity: 0.75;
+    }
   }
 }
